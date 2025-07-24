@@ -4,7 +4,6 @@ import urllib.parse
 st.markdown(
     """
     <style>
-    /* Fundo rosa claro */
     [data-testid="stAppViewContainer"] {
         background-color: #ffe4e1 !important;
     }
@@ -14,41 +13,31 @@ st.markdown(
         padding: 2rem;
     }
 
-    /* Cor cinza nos títulos */
     h1, h2, h3, h4, h5, h6 {
         color: #808080 !important;
     }
 
-    /* Cor cinza nos textos normais */
     .stMarkdown, .stTextInput, .stSelectbox, label, span, p, div {
-        color: #808080 !important;
+        color: black !important;
     }
 
-    /* Fundo amarelo para o selectbox */
     div[data-baseweb="select"] > div {
         background-color: #fff176 !important;
         color: #808080 !important;
     }
 
-    /* Fundo amarelo para o campo de nome */
     input[type="text"] {
         background-color: #fff176 !important;
         color: #333 !important;
     }
 
-    /* Fundo amarelo para o botão */
     .stButton > button {
         background-color: #fff176 !important;
         color: #333 !important;
         font-weight: bold;
     }
 
-    /* Legendas das imagens com fonte maior e cor personalizada */
-    .stImage > figure > figcaption {
-        font-size: 30px !important;
-        font-weight: bold;
-        color: #808080 !important;
-        text-align: center;
+    
     }
     </style>
     """,
@@ -71,7 +60,7 @@ escolha = {
     "Torta (1,5KG-RS60,00)(2,5KG-RS95,00)": "torta.jpeg",
     "Torta Vitrine (2,0KG-R$120,00)": "bolovit.jpeg",
     "Kit festa (A partir de R$140,00)": "kitfesta.jpeg",
-    "Bolo Decorado (65RS/kg -sem topo)": "bolodecorado.jpeg"
+    "Bolo Decorado (RS65/kg -sem topo)": "bolodecorado.jpeg"
 }
 
 st.subheader("Escolha o que você tem interesse:")
@@ -79,7 +68,12 @@ bolo = st.selectbox("Opção", list(escolha.keys()))
 
 for nome_bolo, imagem_bolo in escolha.items():
     if imagem_bolo:
-        st.image(imagem_bolo, width=300, caption=nome_bolo)
+        st.image(imagem_bolo, width=300)
+        st.markdown(
+            f"<p style='text-align: center; font-size: 20px; color: black; font-weight: bold;'>{nome_bolo}</p>",
+            unsafe_allow_html=True
+        )
+
 
 
 
