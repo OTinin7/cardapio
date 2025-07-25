@@ -46,8 +46,8 @@ st.markdown(
 
 
 st.set_page_config(page_title="Pedido de Bolo", layout="centered")
-st.title("Pedido de Bolo via WhatsApp")
-
+st.title("Cardapio de Dea Doces")
+st.subheader("Pedidos via WhatsApp")
 # Seu nome
 nome = st.text_input("Seu nome")
 
