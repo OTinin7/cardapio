@@ -46,7 +46,7 @@ st.markdown(
 
 
 st.set_page_config(page_title="Pedido de Bolo", layout="centered")
-st.title("Cardapio de Dea Doces")
+st.title("Cardapio")
 st.subheader("Instagram: @deadoces23")
 st.write("")
 st.write("")
