@@ -47,7 +47,11 @@ st.markdown(
 
 st.set_page_config(page_title="Pedido de Bolo", layout="centered")
 st.title("Cardapio de Dea Doces")
+st.subheader("Instagram: @deadoces23")
+st.write("")
+st.write("")
 st.subheader("Pedidos via WhatsApp")
+
 # Seu nome
 nome = st.text_input("Seu nome")
 
@@ -56,7 +60,7 @@ escolha = {
     "Não tenho interesse": None,
     "Bolo de Pote-R$7,00": "bolodepote.jpeg",
     "Brigadeiros- R$ 0,80/unid(15g) || R$ 1,30/unid(25g)": "brigadeiros.jpeg",
-    "Fatia Gourmet - R$ 7,50": "fatias.jpeg",
+    "Fatia Gourmet - R$ 8,00": "fatias.jpeg",
     "Torta (1,5KG-R$60,00)(2,5KG-R$95,00)": "torta.jpeg",
     "Torta Vitrine (2,0KG-R$120,00)": "bolovit.jpeg",
     "Kit festa (A partir de R$140,00)": "kitfesta.jpeg",
